@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 28, 2017 9:09:40 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtmm.entities">
+    <class name="Participant" table="PARTICIPANT">
+    	<id name="participantNo" column="PARTICIPANT_NO">
+    		<generator class="increment"></generator>
+    	</id>
+    	<property name="participantName" column="PARTICIPANT_NAME"></property>
+    	<property name="contactNo" column="CONTACT_NO"></property>
+    	<property name="emailAdress" column="EMAIL_ADDRESS"></property>
+    </class>
+</hibernate-mapping>

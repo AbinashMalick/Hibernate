@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 25, 2017 1:35:03 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otms.entities">
+    <class name="InsurancePlan" table="INSURANCE_PLAN">
+    	<id name="insurancePlanNo" column="INSURANCE_PLN_NO">
+    		<generator class="increment"/>
+    	</id>
+    	<property name="insurancePlanName" column="INSURANCE_PLN_NM"/>
+    	<property name="eligibility" column="ELIGIBILITY" />
+    	<property name="minEnroll" column="MIN_ROLL"/>
+    	<property name="maxEnroll" column="MAX_ROLL"/>
+    	<set name="benefits">
+    		<key column="INSURANCE_PLAN_NO"></key>
+    		<one-to-many class="Benefits"/>
+    	</set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 6, 2017 12:42:20 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping package="com.otmoto.entities">
+	<class name="Account" table="ACCOUNT">
+		<id name="accountId" column="ACCOUNT_ID">
+			<generator class="increment"></generator>
+		</id>
+		<property name="accountHolderName" column="ACC_HLDER_NM"/>
+		<property name="accountType" column="ACCOUNT_TYPE"/>
+		
+		<many-to-one name="organization" class="Organization" column="ORGANIZATION_NO" unique="true"></many-to-one>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 31, 2017 1:19:32 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otms.entities">
+    <class name="Resource" table="RESOURCE">
+    	<id name="resourceNo" column="RESOURCE_NO">
+    		<generator class="increment"/>
+    	</id>
+    	<property name="resourceName" column="RESOURCE_NM"/>
+    	<property name="experience" column="EXPERIENCE"/>
+    	<property name="role" column="ROLE"/>
+    	<many-to-one name="project" column="ASS_PROJECT_NO" class="Project" cascade="all"/>  
+    </class>
+</hibernate-mapping>
+

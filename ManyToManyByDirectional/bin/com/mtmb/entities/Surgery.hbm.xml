@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 31, 2017 12:04:25 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtmb.entities">
+	<class name="Surgery" table="SURGERY">
+		<id name="surgeryNo" column="SURGERY_NO">
+			<generator class="increment"/>
+		</id>
+		<property name="surgeryName" column="SURGERY_NM"/>
+		<property name="surgeryType" column="SURGERY_TYPE"/>
+		<property name="surgeryDate" column="SURGERY_DT"/>
+		<set name="doctors" table="DOCTOR_SURGERY" cascade="save-update" >
+			<key column="SURGERY_NO"/>
+			<many-to-many column="DOCTOR_NO" class="Doctor"/>
+		</set>  
+	</class>
+</hibernate-mapping>

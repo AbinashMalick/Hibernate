@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 Jul, 2019 2:19:33 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.entities.Customer" table="CUSTOMER2">
+        <id name="customer_id" type="int">
+        	
+            <column name="CUSTOMER_ID" />
+        </id>
+        <property name="first_name" type="java.lang.String">
+            <column name="FIRST_NAME" />
+        </property>
+        <property name="last_name" type="java.lang.String">
+            <column name="LAST_NAME" />
+        </property>
+        <property name="dob" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+    </class>
+</hibernate-mapping>

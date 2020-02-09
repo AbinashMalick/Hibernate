@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 6, 2017 12:42:20 PM by Hibernate Tools 4.3.5.Final -->
+<hibernate-mapping>
+    <class name="com.gt.entities.Dealer" table="dealer" catalog="automobile" optimistic-lock="version">
+        <id name="dealerCode" type="int">
+            <column name="DEALER_CODE" />
+            <generator class="assigned" />
+        </id>
+        <property name="dealerNm" type="string">
+            <column name="DEALER_NM" length="45" not-null="true" />
+        </property>
+        <property name="registrationDt" type="date">
+            <column name="REGISTRATION_DT" length="10" not-null="true" />
+        </property>
+        <property name="dealerAddressId" type="int">
+            <column name="DEALER_ADDRESS_ID" not-null="true" unique="true" />
+        </property>
+        <property name="contactNo" type="int">
+            <column name="CONTACT_NO" not-null="true" />
+        </property>
+        <property name="emailAddress" type="string">
+            <column name="EMAIL_ADDRESS" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

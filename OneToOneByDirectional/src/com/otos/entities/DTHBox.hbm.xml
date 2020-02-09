@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2017 11:05:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otos.entities">
+	<class name="DTHBox" table="DTHBOX">
+		<id name="dthBoxNo" column="DTH_BOX_NO">
+			<generator class="increment"/>
+		</id>
+		<property name="dthBoxName" column="DTH_BOX_NM"/>
+		<property name="boxType" column="BOX_TYPE"/>
+		<property name="manufactureDate" column="MANF_DT"/>
+		<many-to-one name="digitalCard" class="DigitalCard" column="DIGITAL_CARD" unique="true"/>
+	</class>    
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 25, 2017 1:35:03 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otms.entities">
+    <class name="Benefits" table="BENEFITS">
+    	<id name="benefitId" column="BENEFIT_ID">
+    		<generator class="increment"/>
+    	</id>
+    	<property name="benefitName" column="BENEFIT_NM"/>
+    	<property name="termCondition" column="TERM_COND"/>
+    </class>
+</hibernate-mapping>

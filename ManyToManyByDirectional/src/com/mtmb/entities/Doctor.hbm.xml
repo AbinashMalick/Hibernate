@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 31, 2017 12:04:25 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.mtmb.entities">
+    <class name="Doctor" table="DOCTOR">
+    	<id name="doctorNo" column="DOCTOR_NO">
+    		<generator class="increment"/>
+    	</id>
+    	<property name="doctorName" column="DOCTOR_NM"/>
+    	<property name="experience" column="EXPERIENCE"/>
+    	<property name="specialization" column="SPECIALIZATION"/>
+    	<set name="surgeries" table="DOCTOR_SURGERY" inverse="true">
+    		<key column="DOCTOR_NO"/>
+    		<many-to-many column="SURGERY_NO" class="Surgery" />
+    	</set>
+    </class>
+</hibernate-mapping>

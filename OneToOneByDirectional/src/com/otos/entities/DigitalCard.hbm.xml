@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2017 11:05:36 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="com.otos.entities">
+    <class name="DigitalCard" table="DIGITAL_CARD">
+    	<id name="cardNo" column="CARD_NO">
+    		<generator class="foreign"/>
+    	</id>
+    	<property name="cardName" column="CARD_NM"/>
+    	<property name="cardType" column="CARD_TYPE"/>
+    	<property name="subcriptionPack" column="SUBCRIPTION_PK"/>
+    	<many-to-one name="dthBox" class="DTHBox" column="DTH_BOX_NO"/>
+    </class>
+</hibernate-mapping>
